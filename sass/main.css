@@ -290,7 +290,8 @@ html {
             padding: 1rem;
             line-height: 1.2;
             font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", monospace;
-            font-size: 0.9em; }
+            font-size: 0.9em;
+            overflow: auto; }
             html body #right #content-container #content pre > code {
               margin: 0;
               padding: 0; }
