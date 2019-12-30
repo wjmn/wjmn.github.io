@@ -51,7 +51,7 @@ html {
       height: 100vh;
       margin-left: -320px;
       box-shadow: 0 0 10px #CBD5E0;
-      margin-top: 2.5rem; }
+      margin-top: 3rem; }
       @media print {
         html body #left {
           box-shadow: none; } }
