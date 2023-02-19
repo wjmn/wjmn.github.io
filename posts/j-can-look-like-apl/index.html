@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Redisplaying the ASCII notation of J as APL characters.">
-    <meta name="theme-color" content="#000000" />
     <script src="https://wjmn.github.io/footnotes.js"></script>
     <script src="https://wjmn.github.io/menu.js"></script>
     <link rel="stylesheet" href="https://wjmn.github.io/sass/main.css">
@@ -181,10 +180,10 @@ with Emacs by default.</p>
 </code></pre>
 </details>
 <p>Here is a naive k-means clustering implementation in plain J:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-j" data-lang="j"><span style="color:#19177c">init</span> <span style="color:#666">=.</span> (<span style="color:#666">[</span> ? <span style="color:#666">#</span><span style="color:#666">@</span><span style="color:#666">:</span><span style="color:#666">]</span>) <span style="color:#666">{</span> <span style="color:#666">]</span>
-<span style="color:#19177c">alloc</span> <span style="color:#666">=.</span> <span style="color:#666">{</span><span style="color:#666">.</span><span style="color:#666">@</span><span style="color:#666">:</span><span style="color:#19177c">I</span><span style="color:#666">.</span><span style="color:#666">@</span><span style="color:#666">:</span>(<span style="color:#666">=</span> <span style="color:#666">&lt;</span><span style="color:#666">.</span><span style="color:#666">/</span>)<span style="color:#666">@</span><span style="color:#666">:</span>(<span style="color:#666">+</span><span style="color:#666">/</span><span style="color:#666">@</span><span style="color:#666">:</span><span style="color:#666">*</span><span style="color:#666">:</span><span style="color:#666">@</span><span style="color:#666">:</span><span style="color:#666">-</span><span style="color:#666">&#34;</span><span style="color:#666">1</span>)
-<span style="color:#19177c">step</span> <span style="color:#666">=.</span> (<span style="color:#666">+</span><span style="color:#666">/</span> <span style="color:#666">%</span> <span style="color:#666">#</span>)<span style="color:#666">&amp;</span><span style="color:#666">&gt;</span><span style="color:#666">@</span><span style="color:#666">:</span>(<span style="color:#19177c">alloc</span><span style="color:#666">&#34;</span><span style="color:#666">1</span> <span style="color:#666">2</span> <span style="color:#666">&lt;</span><span style="color:#666">/</span><span style="color:#666">.</span> <span style="color:#666">[</span>)
-<span style="color:#19177c">kmc</span> <span style="color:#666">=.</span> <span style="color:#666">]</span> <span style="color:#19177c">step</span><span style="color:#666">^</span><span style="color:#666">:</span><span style="color:#666">_</span> <span style="color:#19177c">init</span>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-j" data-lang="j"><span style="color:#19177c">init</span> <span style="color:#666">=.</span> (<span style="color:#666">[</span> ? <span style="color:#666">#@:]</span>) <span style="color:#666">{</span> <span style="color:#666">]</span>
+<span style="color:#19177c">alloc</span> <span style="color:#666">=.</span> <span style="color:#666">{.@:</span><span style="color:#19177c">I</span><span style="color:#666">.@:</span>(<span style="color:#666">=</span> <span style="color:#666">&lt;./</span>)<span style="color:#666">@:</span>(<span style="color:#666">+/@:*:@:-&#34;</span><span style="color:#666">1</span>)
+<span style="color:#19177c">step</span> <span style="color:#666">=.</span> (<span style="color:#666">+/</span> <span style="color:#666">%</span> <span style="color:#666">#</span>)<span style="color:#666">&amp;&gt;@:</span>(<span style="color:#19177c">alloc</span><span style="color:#666">&#34;</span><span style="color:#666">1</span> <span style="color:#666">2</span> <span style="color:#666">&lt;/.</span> <span style="color:#666">[</span>)
+<span style="color:#19177c">kmc</span> <span style="color:#666">=.</span> <span style="color:#666">]</span> <span style="color:#19177c">step</span><span style="color:#666">^:</span><span style="color:#666">_</span> <span style="color:#19177c">init</span>
 </code></pre></div><p>Here is how it looks like in Emacs with <code>pretty-mode</code> replacing many of the symbols:</p>
 <p><img src="./kmc.png" alt="img"></p>
 <details>
@@ -243,13 +242,13 @@ of Thought</a> is powerful.</p>
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>J was developed by <a href="https://en.wikipedia.org/wiki/Kenneth_E._Iverson">Kenneth Iverson</a>, the original developer of APL, and <a href="https://en.wikipedia.org/wiki/Roger_Hui">Roger Hui</a>.<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+<p>J was developed by <a href="https://en.wikipedia.org/wiki/Kenneth_E._Iverson">Kenneth Iverson</a>, the original developer of APL, and <a href="https://en.wikipedia.org/wiki/Roger_Hui">Roger Hui</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>While the characters look more similar to APL characters, the code is not written like idiomatic APL (at least, not idiomatic traditional APL). This k-means implementation makes use of J’s support for tacit/point-free programming. Some APL implementations, such as Dyalog APL, also support this style of programming.<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+<p>While the characters look more similar to APL characters, the code is not written like idiomatic APL (at least, not idiomatic traditional APL). This k-means implementation makes use of J’s support for tacit/point-free programming. Some APL implementations, such as Dyalog APL, also support this style of programming. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p><code>kmc</code> is a dyadic function which takes a left integer scalar argument (indicating <code>k</code>) and a right numerical table argument (the data table, with rows corresponding to samples and columns corresponding to sample dimensions).<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+<p><code>kmc</code> is a dyadic function which takes a left integer scalar argument (indicating <code>k</code>) and a right numerical table argument (the data table, with rows corresponding to samples and columns corresponding to sample dimensions). <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>

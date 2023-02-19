@@ -51,7 +51,7 @@ html {
       height: 100vh;
       margin-left: -320px;
       box-shadow: 0 0 10px #CBD5E0;
-      margin-top: 3rem; }
+      margin-top: 2.5rem; }
       @media print {
         html body #left {
           box-shadow: none; } }
@@ -332,3 +332,55 @@ html {
             justify-content: center;
             align-items: center;
             max-width: 100%; }
+    html body .index-card-container {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media only screen and (min-width: 1280px) {
+        html body .index-card-container {
+          height: 80vh; } }
+      html body .index-card-container .index-card {
+        position: relative;
+        height: 525px;
+        width: 300px;
+        padding: 25px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; }
+        @media only screen and (min-width: 1280px) {
+          html body .index-card-container .index-card {
+            box-shadow: 0 0 20px #CBD5E0; } }
+      html body .index-card-container .wjmn-container {
+        margin-bottom: 25px; }
+        html body .index-card-container .wjmn-container .wjmn-image {
+          height: 300px; }
+      html body .index-card-container .stamp-container {
+        position: absolute;
+        right: -140px;
+        top: 20px; }
+        html body .index-card-container .stamp-container .stamp-image {
+          width: 300px;
+          opacity: 50%; }
+      html body .index-card-container .text-container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px; }
+        html body .index-card-container .text-container .row {
+          display: flex;
+          align-items: center;
+          letter-spacing: -1px; }
+          html body .index-card-container .text-container .row .left {
+            width: 40px;
+            margin-right: 10px;
+            font-weight: 100;
+            text-transform: uppercase;
+            font-size: 0.75em; }
+          html body .index-card-container .text-container .row .right {
+            width: 175px; }
