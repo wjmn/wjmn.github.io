@@ -338,7 +338,7 @@ html {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 88vh; }
+      height: 70vh; }
       @media only screen and (min-width: 768px) {
         html body .index-card-container {
           height: 80vh; } }
@@ -381,8 +381,8 @@ html {
           html body .index-card-container .text-container .row .left {
             width: 50px;
             margin-right: 10px;
-            font-weight: 200;
+            font-weight: 300;
             text-transform: uppercase;
-            font-size: 0.6em; }
+            font-size: 0.5em; }
           html body .index-card-container .text-container .row .right {
             width: 200px; }
