@@ -1,1 +1,289 @@
-<!DOCTYPE html><html><head><title>https://wjmn.github.io/posts/j-can-look-like-apl/</title><link rel="canonical" href="https://wjmn.github.io/posts/j-can-look-like-apl/"/><meta name="robots" content="noindex"><meta charset="utf-8" /><meta http-equiv="refresh" content="0; url=https://wjmn.github.io/posts/j-can-look-like-apl/" /></head></html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-24 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>J can look like APL or English</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../static/css/main.css" />
+<script src="../static/js/footnotes.js"></script>
+<script>window.onload = collectFootnotes;</script>
+<nav> <ul> <li> <a href="../index.html">about</a></li> <li> <a href="../posts.html">posts</a></li> <li> <a href="https://github.com/wjmn">github</a></li> </ul> </nav>
+</head>
+<body>
+<div id="preamble" class="status">
+<div class="date">2019-08-16</div>
+</div>
+<div id="content" class="content">
+<h1 class="title">J can look like APL or English
+<br />
+<span class="subtitle">Redisplaying the ASCII notation of J as APL characters.</span>
+</h1>
+<p>
+<a href="https://www.jsoftware.com/">J</a><sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> is a concise, interpreted array programming language which looks infamously like line noise. It is the successor to <a href="https://en.wikipedia.org/wiki/APL_(programming_language)">APL</a>, which is a concise, interpreted array programming language which looks infamously like hieroglyphics.
+</p>
+
+<p>
+Because J uses only ASCII characters, it has to condense a lot of meaning into a constrained symbol set. This means a single character often has multiple meanings.
+</p>
+
+<div id="outline-container-orgfdfd154" class="outline-2">
+<h2 id="orgfdfd154">Making J look like APL</h2>
+<div class="outline-text-2" id="text-orgfdfd154">
+<p>
+APL, in contrast with J, uses unique, distinctive symbols with less overloading. The visual relationship between APL symbols and concepts is somewhat clearer than that of J.
+</p>
+
+<p>
+Many J primitive functions map directly to APL primitive functions. It is therefore relatively easy to naively render J primitives as the corresponding APL symbol using extensions such as <a href="https://github.com/pretty-mode/pretty-mode">pretty-mode</a> and/or <a href="https://www.emacswiki.org/emacs/PrettySymbol">prettify-symbols-mode</a> in Emacs. For J primitives which don't have an APL equivalent, we have to get a bit more creative.
+</p>
+
+<details>
+<summary>
+<p>
+Here is an excerpt from my Emacs init file showing an example set of J to APL primitive mappings. This requires <code>pretty-mode</code> and <code>j-mode</code>.
+</p>
+</summary>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(require 'pretty-mode)
+
+(setq j-symbols
+    '(("=\\."     . ?←)
+    ("=:"       . ?⤆)
+    ("_:"       . ?∞)
+    ("&lt;:"       . ?≤)
+    ("&gt;:"       . ?≥)
+    ("&gt;\\."     . ?⌈)
+    ("&lt;\\."     . ?⌊)
+    ("\\*"      . ?×)
+    ("%"        . ?÷)
+    ("\\+\\."   . ?∨)
+    ("-\\."     . ?¬)
+    ("*\\."     . ?∧)
+    ("%\\."     . ?⌹)
+    ("\\+:"     . ?⍱)
+    ("-:"       . ?≡)
+    ("*:"       . ?⍲)
+    ("%:"       . ?√)
+    ("\\^\\."   . ?⍟)
+    ("\\^:"     . ?⍣)
+    ("\\$"      . ?⍴)
+    ("\\$\\."   . ?ς)
+    ("\\$:"     . ?∇)
+    ("~"        . ?⍨)
+    ("~\\."     . ?∪)
+    ("~:"       . ?≠)
+    ("|\\."     . ?⌽)
+    ("|:"       . ?⍉)
+    (",\\."     . ?⍪)
+    (",:"       . ?⍿)
+    (";:"       . ?⍧)
+    ("#\\."     . ?⊥)
+    ("#:"       . ?⊤)
+    ("/\\."     . ?⍁)
+    ("\\\\\\."  . ?⍂)
+    ("/:"       . ?⍋)
+    ("\\\\:"    . ?⍒)
+    ("\\]"      . ?⊢)
+    ("\\["      . ?⊣)
+    ("\\[:"     . ?⍅)
+    ("{\\."     . ?↑)
+    ("}\\."     . ?↓)
+    ("{:"       . ?⍏)
+    ("}:"       . ?⍖)
+    ("\""       . ?⍤)
+    ("\"\\."    . ?⍎)
+    ("\":"      . ?⍕)
+    ("`"        . ?⍮)
+    ("@"        . ?⍛)
+    ("@\\."     . ?⌼)
+    ("@:"       . ?⍜)
+    ("\\&amp;"      . ?∘)
+    ("\\&amp;\\."   . ?↺)
+    ("\\&amp;\\.&gt;"  . ?¨)
+    ("\\&amp;:"     . ?⌾)
+    ("\\?\\."   . ?⍰)
+    ))
+
+(defun prettify-j ()
+    (progn
+    (push '("a." . ?æ) prettify-symbols-alist)
+    (push '("a:" . ?⍬) prettify-symbols-alist)
+    (push '("A:" . ?⅍) prettify-symbols-alist)
+    (push '("C." . ?ℂ) prettify-symbols-alist)
+    (push '("d." . ?δ) prettify-symbols-alist)
+    (push '("D." . ?Δ) prettify-symbols-alist)
+    (push '("D:" . ?⌳) prettify-symbols-alist)
+    (push '("e." . ?∊) prettify-symbols-alist)
+    (push '("E." . ?⍷) prettify-symbols-alist)
+    (push '("f." . ?ℱ) prettify-symbols-alist)
+    (push '("i." . ?⍳) prettify-symbols-alist)
+    (push '("i:" . ?ᵼ) prettify-symbols-alist)
+    (push '("I." . ?⍸) prettify-symbols-alist)
+    (push '("j." . ?ⅉ) prettify-symbols-alist)
+    (push '("L." . ?ℒ) prettify-symbols-alist)
+    (push '("NB." . ?⍝) prettify-symbols-alist)
+    (push '("p." . ?ℙ) prettify-symbols-alist)
+    (push '("p:" . ?⅌) prettify-symbols-alist)
+    (push '("q:" . ?ℚ) prettify-symbols-alist)
+    (push '("r." . ?∡) prettify-symbols-alist)
+    (push '("y" . ?ω) prettify-symbols-alist)
+    (push '("x" . ?α) prettify-symbols-alist)
+    (push '("u" . ?⍶) prettify-symbols-alist)
+    (push '("v" . ?⍹) prettify-symbols-alist)
+    (prettify-symbols-mode)))
+
+(pretty-add-keywords 'inferior-j-mode j-symbols)
+(pretty-add-keywords 'j-mode j-symbols)
+
+(add-hook 'inferior-j-mode-hook 'turn-on-pretty-mode)
+(add-hook 'inferior-j-mode-hook 'turn-off-smartparens-mode)
+(add-hook 'inferior-j-mode-hook 'prettify-j)
+(add-hook 'j-mode-hook 'turn-on-pretty-mode)
+(add-hook 'j-mode-hook 'turn-off-smartparens-mode)
+(add-hook 'j-mode-hook 'prettify-j)
+</pre>
+</div>
+
+</details>
+
+<p>
+Here is a naive k-means clustering implementation in plain J:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j">init =. ([ ? #@:]) { ]
+alloc =. {.@:I.@:(= &lt;./)@:(+/@:*:@:-"1)
+step =. (+/ % #)&amp;&gt;@:(alloc"1 2 &lt;/. [)
+kmc =. ] step^:_ init
+</pre>
+</div>
+
+<p>
+Here is how it looks like in Emacs with `pretty-mode` replacing many of the symbols:
+</p>
+
+
+<div id="org539c3d4" class="figure">
+<p><img src="../static/images/j-can-look-like-apl-kmc.png" alt="j-can-look-like-apl-kmc.png" />
+</p>
+</div>
+
+<details>
+<summary>
+<p>
+Here is another example, using <a href="https://code.jsoftware.com/wiki/Essays/Quicksort">Roger Hui's quicksort implementation from the J Software Wiki</a>:
+</p>
+</summary>
+
+<p>
+The original J:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j">quicksort=: (($:@(&lt;#[) , (=#[) , $:@(&gt;#[)) ({~ ?@#)) ^: (1&lt;#)
+</pre>
+</div>
+
+<p>
+And J displayed with APL-like glyphs:
+</p>
+
+
+<div id="org2a05be2" class="figure">
+<p><img src="../static/images/j-can-look-like-apl-quicksort.png" alt="j-can-look-like-apl-quicksort.png" />
+</p>
+</div>
+
+</details>
+
+<p>
+This is probably equally unreadable if you are not already familiar with APL<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>, but I do find it somewhat easier to read than the plain ASCII.
+</p>
+
+<p>
+I've put together a demo of using J in an APL-like fashion in the following video, which also goes through the k-means clustering code:
+</p>
+
+<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/jTeENcpUZdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="outline-container-orgbb8f702" class="outline-2">
+<h2 id="orgbb8f702">Making J look like English</h2>
+<div class="outline-text-2" id="text-orgbb8f702">
+<p>
+J can also be written like English. The <a href="https://code.jsoftware.com/wiki/Guides/Primitives">primitives addon</a> for J assigns English aliases for all of J's symbolic primitives. You can also define new aliases freely.
+</p>
+
+<p>
+The following is an English translation of the k-means clustering code in J. The functions are defined in a point-free style, which tends to be idiomatic in J, so no intermediate variables are actually declared &#x2013; the primitive functions are instead composed together similar to pure functional programming in other languages.
+</p>
+
+<p>
+First, the <code>primitives</code> addon is loaded and the following convenience aliases are defined. These are general enough that these could go in a utilities script.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j">load 'primitives'
+
+fold =: insert
+sum =: plus fold
+minimum =: min fold
+mean =: sum divide tally
+vectors =: rank 1
+then =: conjunction : ' v at u'
+groupby =: dyad : 'y (box key) x'
+</pre>
+</div>
+
+<p>
+K-means clustering can then be expressed with the following J code<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-j">kmc =: right (step power infinity) initialise
+initialise =: (left deal tally at right) from right
+step =: (left groupby allocate rank 1 2) then (mean every)
+allocate =: euclidean then (equal minimum) then indices then head
+euclidean =: (minus then square then sum) vectors
+</pre>
+</div>
+
+<p>
+This has the advantage that the code almost just uses plain English. It's easy to write on a phone (J has Android and iPhone versions), you could dictate it, and you could spellcheck it too.
+</p>
+
+<p>
+Unfortunately, you still need to understand J's semantics and parsing to read and write the English version, and having attempted to write J like this, it feels much less comfortable than vanilla or APL-like J. I wouldn't recommend writing J like this forever. It's an interesting exercise, but it became very apparent when I was writing this sample exactly why Iverson's <a href="https://www.jsoftware.com/papers/tot.htm">Notation as a Tool of Thought</a> is powerful.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+J was developed by <a href="https://en.wikipedia.org/wiki/Kenneth_E._Iverson">Kenneth Iverson</a>, the original developer of APL, and <a href="https://en.wikipedia.org/wiki/Roger_Hui">Roger Hui</a>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+While the characters look more similar to APL characters, the code is not written like idiomatic APL (at least, not idiomatic traditional APL). This k-means implementation makes use of J's support for tacit/point-free programming. Some APL implementations, such as Dyalog APL, also support this style of programming.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<code>kmc</code> is a dyadic function which takes a left integer scalar argument (indicating <code>k</code>) and a right numerical table argument (the data table, with rows corresponding to samples and columns corresponding to sample dimensions).
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div class="endmark">∎</endmark>
+</div>
+</body>
+</html>

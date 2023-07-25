@@ -1,0 +1,447 @@
+/* -------------------------------------------------------------------------- */
+/* KEYFRAMES */
+/* -------------------------------------------------------------------------- */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* LAYOUT AND ALIGNMENT */
+/* -------------------------------------------------------------------------- */
+
+html {
+    border-width: 4px 0 4px 0;
+    border-style: solid;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+body {
+    padding: 0 0 2rem 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav {
+    padding: 1rem 2rem;
+    max-width: 45rem;
+    margin: auto;
+}
+nav ul {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+nav li {
+    margin-right: 2em;
+}
+#content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 45rem;
+    margin: auto;
+    position: relative;
+}
+.date {
+    margin: auto;
+    padding: 2rem 2rem 0rem 2rem;
+    max-width: 45rem;
+    text-align: center;
+}
+.endmark {
+    margin: auto;
+    padding: 2rem 2rem;
+    max-width: 45rem;
+    text-align: right;
+}
+.title {
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    position: relative;
+    text-align: center;
+}
+.subtitle {
+    margin-top: 1em;
+    position: relative;
+    display: block;
+}
+h1, h2, h3, h4, h5 {
+    position: relative;
+}
+h2 {
+    letter-spacing: -0.5px;
+    margin-top: 2em;
+}
+details {
+    margin: 2em 0 2em 0;
+    display: flex;
+    border-width: 0 0 0 0.5px;
+    border-style: solid;
+    padding-left: 1em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+    display: none;
+    content: "";
+}
+details summary:before {
+    content: "▷"
+}
+
+details[open] summary:before {
+    content: "▽"
+}
+details summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+details summary p {
+    margin: 0;
+    margin-left: 1em;
+    padding: 0;
+}
+.tag {
+    padding: 2px;
+}
+.org-right {
+    margin-left: auto;
+    margin-right: 0px;
+    text-align: right;
+}
+.org-left {
+    margin-left: 0px;
+    margin-right: auto;
+    text-align: left;
+}
+.org-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+ol {
+    counter-reset: ol;
+    padding-left: 0;
+    position: relative;
+}
+ol > li {
+    counter-increment: ol;
+    list-style-type: none;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    margin-left: 2rem;
+    position: relative;
+}
+ol > li:before {
+    content: counter(ol);
+    position: absolute;
+    top: 0.1rem;
+    vertical-align: center;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-left: -2rem;
+    display: inline-flex;
+    width: 1.25em;
+    height: 1.25em;
+    font-size: 0.7em;
+    border-width: 1px;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+}
+#postamble p, #preamble p {
+    margin: .2em;
+}
+p.verse {
+    margin-left: 3%;
+}
+pre {
+    padding: 8pt;
+    overflow: auto;
+    width: 90%;
+    margin: 2em auto 2em auto;
+}
+pre.src {
+    position: relative;
+    overflow: auto;
+}
+table {
+    border-collapse:collapse;
+}
+caption.t-above {
+    caption-side: top;
+}
+caption.t-bottom {
+    caption-side: bottom;
+}
+td, th {
+    vertical-align:top;
+}
+th.org-right {
+    text-align: center;
+}
+th.org-left {
+    text-align: center;
+}
+th.org-center {
+    text-align: center;
+}
+td.org-right {
+    text-align: right;
+}
+td.org-left {
+    text-align: left;
+}
+td.org-center {
+    text-align: center;
+}
+.footpara {
+    display: inline;
+}
+.footdef {
+    margin-bottom: 1em;
+}
+.figure {
+    padding: 1em;
+}
+iframe {
+    margin: 3em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+img {
+    max-width: 100%;
+}
+.figure p {
+    text-align: center;
+}
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+.equation {
+    vertical-align: middle;
+}
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+#org-div-home-and-up {
+    text-align: right;
+    font-size: 70%;
+    white-space: nowrap;
+}
+textarea {
+    overflow-x: auto;
+}
+.org-svg {
+    width: 90%;
+}
+.aside-footnote {
+    display: none;
+}
+#footnotes {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-width: 0.5px 0 0 0;
+    border-style: dashed;
+}
+h2.footnotes {
+    display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* SIZE-SPECIFIC LAYOUT*/
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+    nav, #content, .date, .endmark {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .title, .date {
+        text-align: left;
+    }
+    .subtitle {
+        font-size: 0.9em;
+    }
+    h2:before {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    nav, #content, .date, .endmark {
+        padding-right: 200px;
+    }
+    #footnotes {
+        display: none;
+    }
+    .aside-footnote {
+        display: block;
+        position: relative;
+        animation: fadein 0.3s;
+        padding-top: 0.5rem;
+        float: right;
+        width: 280px;
+        clear: both;
+        border-width: 0.5px 0 0 0;
+        border-style: dashed;
+        margin-bottom: 2rem;
+        margin-left: 0;
+        margin-right: -320px;
+    }
+    .aside-footnote label {
+        float: left;
+    }
+    .footnote-content {
+        margin-left: 1.4em;
+    }
+}
+
+@media print {
+    html {
+        border-width: 0;
+    }
+    nav {
+        display: none;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* FONTS AND TEXT */
+/* -------------------------------------------------------------------------- */
+
+html {
+    font-family: "Segoe UI", sans-serif;
+    text-rendering: optimizeLegibility;
+}
+#content {
+    line-height: 1.5;
+}
+a {
+    text-decoration: underline;
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+}
+.aside-footnote label {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.aside-footnote {
+    font-size: 1em;
+    line-height: 1.3;
+}
+.footref, .footnum {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.date {
+    font-family: monospace;
+}
+.date:before {
+    content: "🙚 ";
+}
+.date:after {
+    content: " 🙘";
+}
+.title {
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: -0.05em;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: inherit;
+}
+h2:before {
+    content: "§";
+    position: absolute;
+    left: -1em;
+}
+.subtitle {
+    font-weight: inherit;
+    letter-spacing: -0.025em;
+    font-size: medium;
+}
+.tag {
+    font-family: monospace;
+    font-size: 80%;
+    font-weight: normal;
+}
+.underline {
+    text-decoration: underline;
+}
+#postamble p, #preamble p {
+    font-size: 90%;
+}
+pre {
+    font-family: monospace;
+}
+dt {
+    font-weight: bold;
+}
+.linenr {
+    font-size: smaller
+}
+code {
+    margin: 0 0.25em;
+}
+
+/* -------------------------------------------------------------------------- */
+/* COLORS */
+/* -------------------------------------------------------------------------- */
+
+html {
+    border-color: crimson;
+}
+nav, body {
+}
+code {
+    background: snow;
+}
+a {
+}
+a:hover {
+    color: crimson;
+}
+.aside-footnote {
+    border-color: crimson;
+}
+.aside-footnote label {
+    color: crimson;
+}
+.date:before, .date:after, .endmark {
+    color: crimson;
+}
+h2:before {
+    color: crimson;
+}
+.footref, .footnum {
+    color: crimson;
+}
+.timestamp {
+}
+.timestamp-kwd {
+}
+details {
+    border-color: crimson;
+}
+.tag {
+}
+pre {
+    border-top: 2px solid mistyrose;
+    border-bottom: 2px solid mistyrose;
+    background-color: snow;
+}
+#footnotes {
+    border-color: crimson;
+}
