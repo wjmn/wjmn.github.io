@@ -3,31 +3,27 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-16 -->
+<!-- 2023-07-24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Posts</title>
+<title>about</title>
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="./static/css/main.css" />
 <nav> <ul> <li> <a href="./index.html">about</a></li> <li><a href="./posts.html">posts</a></li> <li> <a href="https://github.com/wjmn">github</a></li> </ul> </nav>
 </head>
 <body>
 <div id="preamble" class="status">
-<div class="date">2024-04-16</div>
+<div class="date">2023-07-21</div>
 </div>
 <div id="content" class="content">
-<h1 class="title">Posts</h1>
+<h1 class="title">about</h1>
 <p>
-Below is a complete sitemap. I occasionally post some small bits of writing; there's not much to see at the moment though.
+I'm Jamin (a.k.a. Jamie). I'm currently studying an MS in Biomedical Informatics at New York University as a Fulbright scholar from Australia (funded by the Kinghorn Foundation). Previously, I worked as a medical resident in Melbourne and as an anatomical pathology registrar in Sydney. I'm interested in ways we can use data to improve how we understand biology and medicine. In my spare time, I dabble with programming languages.
 </p>
 
-<ul class="org-ul">
-<li><a href="index.html">index</a></li>
-<li>posts
-<ul class="org-ul">
-<li><a href="posts/j-can-look-like-apl.html">J can look like APL or English</a></li>
-</ul></li>
-</ul>
+<p>
+A copy of my CV is <a href="./static/docs/cv.pdf">here (PDF)</a>.
+</p>
 </div>
 <div id="postamble" class="status">
 <div class="endmark">∎</endmark>
