@@ -1,11 +1,163 @@
 <html>
 
     <head>
-        <title>MS BMI Poster Day Supplementary</title>
+        <title>Hi-C reveals how genomic rearrangements alter genome topology around oncogenes in standard clinical biopsies of lymphoid cancers.</title>
     </head>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            margin: 0 auto;
+            padding: 1rem;
+            max-width: 800px;
+        }
+
+        .header {
+            color: white;
+            background: #57068c;
+            border-bottom: 20px solid #702b9d;
+            width: 100%;
+            height: 50vh;
+        }
+
+        .header .content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .header h1 {
+            text-align: left;
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: -0.5px;
+            font-weight: normal;
+        }
+
+        .header .subtitle {
+            margin-top: 1rem;
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-weight: normal;
+        }
+        .spacer {
+            margin: 1rem 0;
+        }
+        ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-top: 1rem;
+        }
+        h3 {
+            font-weight: normal;
+        }
+        a {
+            border: 1px solid blue;
+            padding: 0.5rem;
+            display: block;
+            text-decoration: none;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        a:hover {
+            background: #eeeeee;
+        }
+        a:active {
+            background: #702b9d;
+            color: white;
+            border: 1px solid white;
+        }
+
+        img {
+            width: 100%;
+            border: 1px solid #cccccc;
+            margin: 1rem 0;
+        }
+        .borderless {
+            border: none;
+        }
+    </style>
+
     <body>
-        <h1>MS BMI Poster Day Supplementary</h1>
-        <p>Currently a placeholder...</p>
+
+
+        <div class="header">
+            <div class="content">
+            <div class="subtitle">Supplementary Material</div>
+            <h1>
+                Hi-C reveals how genomic rearrangements alter genome topology around oncogenes in standard clinical biopsies of lymphoid cancers.
+            </h1>
+            </div>
+        </div>
+
+        <div class="content">
+
+        <h2>
+            Poster References
+        </h2>
+        <ol>
+            <li>Lieberman-Aiden, E. et al. Comprehensive mapping of long range interactions reveals folding principles of the human genome. Science 326, 289–293 (2009)
+                <div><a href="https://pubmed.ncbi.nlm.nih.gov/19815776/">Link to article on PubMed</a></div>
+            </li>
+            <li>Schmitt, A. D. et al. Evaluation of Hi-C sequencing for the detection of gene fusions in hematologic and solid pediatric cancer samples. 2024.05.10.24306838 medRxiv preprint (2024)
+                <div><a href="https://www.medrxiv.org/content/10.1101/2024.05.10.24306838v1">Link to article on medRxiv</a></div>
+            </li>
+            <li>Ryan, R. J. H. et al. Detection of Enhancer-Associated Rearrangements Reveals Mechanisms of Oncogene Dysregulation in B-cell Lymphoma. Cancer Discovery 5, 1058–1071 (2015).
+                <div><a href="https://pubmed.ncbi.nlm.nih.gov/26229090/">Link to article on PubMed</a></div>
+
+            </li>
+        </ol>
+
+        <div class="spacer"><br></div>
+
+        <h2>
+            Hi-C Tools Developed During Project
+        </h2>
+
+        <h3>
+            hicdash: a Hi-C plotting and structural variant report generation tool
+        </h3>
+
+        <img src="./hicdash.gif">
+
+        <a href="https://github.com/wjmn/hicdash">Link to GitHub repository</a>
+
+        <div class="spacer"><br></div>
+
+        <h3>
+            hiccurate: an interactive Hi-C breakpoint curation tool
+        </h3>
+
+        <img src="./hiccurate.gif">
+
+        <a href="https://github.com/wjmn/hiccurate">Link to GitHub repository</a>
+
+
+        <div class="spacer"><br></div>
+
+        <h2>Supplementary Figures</h3>
+            <h3>Genome-wide Hi-C matrices provide efficient global views of structural variation.</h3>
+            <img class="borderless" src="extra-fig-1.png">
+        <div class="spacer"><br></div>
+            <h3>Hi-C provides useful information for reconstructing fused chromosomes</h3>
+            <img class="borderless" src="extra-fig-2.png">
+            <img class="borderless" src="extra-fig-3.png">
+
+        <div class="spacer"><br></div>
+        </div>
     </body>
 
 </html>
