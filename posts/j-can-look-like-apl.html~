@@ -3,12 +3,15 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-06-25 -->
+<!-- 2025-04-19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>J can look like APL or English</title>
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <script src="../static/js/footnotes.js"></script>
 <script>window.onload = collectFootnotes;</script>
 <nav> <ul> <li> <a href="../index.html">about</a></li> <li> <a href="../posts.html">posts</a></li> <li> <a href="https://github.com/wjmn">github</a></li> </ul> </nav>
@@ -168,7 +171,7 @@ Here is how it looks like in Emacs with <code>pretty-mode</code> replacing many 
 </p>
 
 
-<div id="org82d2dde" class="figure">
+<div id="org7ef3d17" class="figure">
 <p><img src="../static/images/j-can-look-like-apl-kmc.png" alt="j-can-look-like-apl-kmc.png" />
 </p>
 </div>
@@ -194,7 +197,7 @@ And J displayed with APL-like glyphs:
 </p>
 
 
-<div id="org121b53a" class="figure">
+<div id="org7fcaa4c" class="figure">
 <p><img src="../static/images/j-can-look-like-apl-quicksort.png" alt="j-can-look-like-apl-quicksort.png" />
 </p>
 </div>

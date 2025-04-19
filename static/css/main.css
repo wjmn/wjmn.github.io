@@ -15,8 +15,8 @@
 /* -------------------------------------------------------------------------- */
 
 html {
-    border-width: 4px 0 4px 0;
-    border-style: solid;
+    /* border-width: 4px 0 4px 0; */
+    /* border-style: solid; */
     box-sizing: border-box;
     min-height: 100vh;
 }
@@ -62,10 +62,8 @@ nav li {
     margin-bottom: 2.5rem;
     margin-top: 1.5rem;
     position: relative;
-    text-align: center;
 }
 .subtitle {
-    margin-top: 1em;
     position: relative;
     display: block;
 }
@@ -216,6 +214,7 @@ iframe {
 }
 img {
     max-width: 100%;
+    border: 1px solid lightgray;
 }
 .figure p {
     text-align: center;
@@ -251,7 +250,7 @@ textarea {
     margin-top: 4rem;
     padding-top: 2rem;
     border-width: 0.5px 0 0 0;
-    border-style: dashed;
+    border-style: solid;
 }
 h2.footnotes {
     display: none;
@@ -293,7 +292,7 @@ h2.footnotes {
         width: 280px;
         clear: both;
         border-width: 0.5px 0 0 0;
-        border-style: dashed;
+        border-style: solid;
         margin-bottom: 2rem;
         margin-left: 0;
         margin-right: -320px;
@@ -320,7 +319,7 @@ h2.footnotes {
 /* -------------------------------------------------------------------------- */
 
 html {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Inter", "Arial", "Helvetica", system-ui, sans-serif;
     text-rendering: optimizeLegibility;
 }
 #content {
@@ -346,21 +345,27 @@ a {
     font-size: 0.9em;
 }
 .date {
-    font-family: monospace;
+    /* display: none; */
+    text-align: left;
+    margin-bottom: -1em;
 }
 .date:before {
-    content: "🙚 ";
+    content: "— ";
 }
 .date:after {
-    content: " 🙘";
+    /* content: " —"; */
+    /* content: " 🙘"; */
 }
 .title {
-    font-size: 2rem;
-    font-weight: normal;
-    letter-spacing: -0.05em;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: -0.04em;
+    text-align: left;
+    font-family: "Libre Baskerville", "Baskerville", Georgia, 'Times New Roman', Times, serif;
 }
 h1, h2, h3, h4, h5 {
-    font-weight: inherit;
+    font-weight: bold;
+    font-family: "Libre Baskerville", "Baskerville", Georgia, 'Times New Roman', Times, serif;
 }
 h2:before {
     content: "§";
@@ -369,11 +374,12 @@ h2:before {
 }
 .subtitle {
     font-weight: inherit;
-    letter-spacing: -0.025em;
-    font-size: medium;
+    letter-spacing: -0.02em;
+    font-size: 1.5rem;
+    font-family: "Inter", "Arial", "Helvetica", system-ui, sans-serif;
+    font-weight: normal;
 }
 .tag {
-    font-family: monospace;
     font-size: 80%;
     font-weight: normal;
 }
@@ -384,7 +390,7 @@ h2:before {
     font-size: 90%;
 }
 pre {
-    font-family: monospace;
+    font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Mono", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Consolas", "Courier New", monospace;
 }
 dt {
     font-weight: bold;
@@ -400,9 +406,6 @@ code {
 /* COLORS */
 /* -------------------------------------------------------------------------- */
 
-html {
-    border-color: crimson;
-}
 nav, body {
 }
 code {
@@ -411,37 +414,37 @@ code {
 a {
 }
 a:hover {
-    color: crimson;
+    background: oklch(96.2% 0.059 95.617);
 }
 .aside-footnote {
-    border-color: crimson;
+    border-color: black;
 }
 .aside-footnote label {
-    color: crimson;
+    color: black;
 }
 .date:before, .date:after, .endmark {
-    color: crimson;
+    color: black;
 }
 h2:before {
-    color: crimson;
+    color: black;
 }
 .footref, .footnum {
-    color: crimson;
+    color: black;
 }
 .timestamp {
 }
 .timestamp-kwd {
 }
 details {
-    border-color: crimson;
+    border-color: black;
 }
 .tag {
 }
 pre {
-    border-top: 2px solid mistyrose;
-    border-bottom: 2px solid mistyrose;
-    background-color: snow;
+    border-top: 2px solid oklch(92.8% 0.006 264.531);
+    border-bottom: 2px solid oklch(92.8% 0.006 264.531);
+    background-color: oklch(98.5% 0.002 247.839);
 }
 #footnotes {
-    border-color: crimson;
+    border-color: black;
 }

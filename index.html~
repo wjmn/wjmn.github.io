@@ -3,23 +3,25 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-06-25 -->
+<!-- 2025-04-19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>about</title>
 <meta name="generator" content="Org Mode" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="./static/css/main.css" />
 <nav> <ul> <li> <a href="./index.html">about</a></li> <li><a href="./posts.html">posts</a></li> <li> <a href="https://github.com/wjmn">github</a></li> </ul> </nav>
 </head>
 <body>
 <div id="preamble" class="status">
-<div class="date">2023-07-21</div>
+<div class="date">2025-04-19</div>
 </div>
 <div id="content" class="content">
 <h1 class="title">about</h1>
 <p>
-I'm Jamin (a.k.a. Jamie). I'm currently studying an MS in Biomedical Informatics at New York University as a Fulbright scholar from Australia (funded by the Kinghorn Foundation). Previously, I worked as a medical resident in Melbourne and as an anatomical pathology registrar in Sydney. I'm interested in ways we can use data to improve how we understand biology and medicine. In my spare time, I dabble with programming languages.
-</p>
+I'm Jamin (a.k.a. Jamie). I'm currently working as a genetic pathology registrar at SA Pathology. In my spare time, I dabble with programming languages.</p>
 </div>
 <div id="postamble" class="status">
 <div class="endmark">∎</endmark>
